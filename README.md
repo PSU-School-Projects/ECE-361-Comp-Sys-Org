@@ -17,16 +17,14 @@ function foo() {
     return 1 + 2
 }
 ```
-**The Cauchy-Schwarz Inequality**
+**The Cauchy-Schwarz Inequality** 
 $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
 :dog:
 ：いぬ：
 「僕のドクメントです。」
-$$
-f(x) = \int_{\infty}^{\infty}
+$$f(x) = \int_{\infty}^{\infty}
 \hat f(\xi)\,e^{2 \pi i \xi x}
-\,d\xi+ 10\frac{e}{10} 10^{2e}
-$$
+\,d\xi+ 10\frac{e}{10} 10^{2e}$$
 ![ice skating is cool.](20220205_124840.jpg)
 
 <div id="centered" align="center">
