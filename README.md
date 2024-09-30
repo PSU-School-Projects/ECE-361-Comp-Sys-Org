@@ -17,6 +17,8 @@ function foo() {
     return 1 + 2
 }
 ```
+**The Cauchy-Schwarz Inequality**
+$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
 :dog:
 ：いぬ：
 「僕のドクメントです。」
@@ -46,7 +48,7 @@ $$
    e & f & g & v
 \end{pmatrix}
 $$
-$$
+inline math test $
 \begin{bmatrix}
    a & b \\
    c & d
@@ -55,12 +57,17 @@ $$
    a & b \\
    c & d
 \end{Bmatrix}
-$$
-$$
-\text{\H{a}}
-$$
+$
+$$\text{\H{a}}$$
 $$
 x = \begin{cases}
    a &\text{if } b \\
    c &\text{if } d
 \end{cases}
+$$
+test
+$$% \f is defined as #1f(#2) using the macro
+f\relax(x) = \int_{-\infty}^\infty
+    f\hat\xi\,e^{2 \pi i \xi x}
+    \,d\xi
+$$
