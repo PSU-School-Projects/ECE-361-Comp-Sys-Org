@@ -1,7 +1,10 @@
 # ECE-361-Comp-Sys-Org
 > Test Page \
 > [Latex Reference](https://quickref.me/latex.html?q=matrix) \
-> [VS code mark down math extention](https://marketplace.visualstudio.com/items?itemName=goessner.mdmath)
+> [VS code mark down math extention](https://marketplace.visualstudio.com/items?itemName=goessner.mdmath) \
+> https://github.github.com/gfm/ \
+> https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions \
+> https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 ```java
 public static void main() {
     //do stuff
@@ -22,6 +25,14 @@ $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \
 :dog:
 ：いぬ：
 「僕のドクメントです。」
+**The Cauchy-Schwarz Inequality**
+
+```math
+\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+```
+
+**The Cauchy-Schwarz Inequality**
+$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
 $$f(x) = \int_{\infty}^{\infty}
 \hat f(\xi)\,e^{2 \pi i \xi x}
 \,d\xi+ 10\frac{e}{10} 10^{2e}$$
