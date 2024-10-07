@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <strings.h>
-
 
 int check_one_1(unsigned char binaryVal) {
     if (binaryVal != 0 && (binaryVal & (binaryVal - 1)) == 0) {
