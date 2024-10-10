@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "atomic": "c",
+        "system_error": "c",
+        "type_traits": "c",
+        "xlocmon": "c",
+        "xtr1common": "c",
+        "xutility": "c"
+    }
+}
