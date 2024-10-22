@@ -1,0 +1,18 @@
+
+Current working directory: \\wsl.localhost\Ubuntu\home\jvandag\code\ECE-361-Comp-Sys-Org\HW1
+
+Greatings traveler. . .
+If you're looking to run HW1 you've come to the right place.
+Lets begin!
+ one little, two little, three little spiders
+ four little, five little, six little spiders
+ seven little, eight little, nine little spiders
+
+ten little spider bugs
+
+
+ ten little, nine little, eight little spiders
+ seven little, six little, five little spiders
+ four little, three little, two little spiders
+
+one little spider bugs
