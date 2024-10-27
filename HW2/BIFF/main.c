@@ -2,7 +2,7 @@
  *  @author: Jeremiah Vandagrift (j.c.vandagrift@gmail.com)
  *  @date:   10-Oct-2024
  *
- *  @brief: 
+ *  @brief: A program that decrypts BIFF speak
  * 
  */
 
@@ -12,7 +12,10 @@
 #include <errno.h>
 #include <stdbool.h> 
 
+#include "helperFuncs.h"
 #include "../libs/lineHelper.h"
+
+#define MAX_LENGTH 50
 
 int main() {
     // greet the user and display the working directory for the application
@@ -30,10 +33,13 @@ int main() {
 
     printf("\nGreatings traveler. . .\n"
     "If you're looking to run HW2 you've come to the right place.\n"
-    "Lets begin!\n");
+    "Lets begin!\n\n");
     /*********END of Greeting**********/
 
-    char str[12];
-    getaLine(str, 12);
-    printf("Test String: %s\n", str);
-    printf(str);
+    char str[MAX_LENGTH];
+    printf("Input BIFF message:\n");
+    getaLine(str, MAX_LENGTH);
+    char trans_str[MAX_LENGTH];
+    BIFF_translate(str, trans_str);
+    printf("BIFF Message: %s\nTranslation: %s\n", str, trans_str);
+}

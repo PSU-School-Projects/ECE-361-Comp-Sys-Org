@@ -1,0 +1,43 @@
+jvandag@JVsSurfacePro9:~/code/ECE-361-Comp-Sys-Org/HW2/BIFF$ bash run.sh 
+x86_64-w64-mingw32-gcc -Wall -g -c helperFuncs.c -o helperFuncs.o
+x86_64-w64-mingw32-gcc -Wall -g -o BIFF.exe main.o helperFuncs.o ../libs/lineHelper.o
+
+Current working directory: \\wsl.localhost\Ubuntu\home\jvandag\code\ECE-361-Comp-Sys-Org\HW2\BIFF
+
+Greatings traveler. . .
+If you're looking to run HW2 you've come to the right place.
+Lets begin!
+
+Input BIFF message:
+9h3y 9D9uuuuuuuuuuuuuu99999uuu99D9e, 9C 15 9C009L!    
+BIFF Message: 9h3y 9D9uuuuuuuuuuuuuu99999uuu99D9e, 9C 15 9C009L
+Translation: Hey DUuuuuuuuuuuuuuUuuDE, C ls CooL
+jvandag@JVsSurfacePro9:~/code/ECE-361-Comp-Sys-Org/HW2/BIFF$ bash run.sh 
+make: Nothing to be done for 'all'.
+
+Current working directory: \\wsl.localhost\Ubuntu\home\jvandag\code\ECE-361-Comp-Sys-Org\HW2\BIFF
+
+Greatings traveler. . .
+If you're looking to run HW2 you've come to the right place.
+Lets begin!
+
+Input BIFF message:
+9h3y 9D9u9D9e, 9C 15 9C009L!        
+BIFF Message: 9h3y 9D9u9D9e, 9C 15 9C009L!
+
+Translation: Hey DUDE, C ls CooL!
+
+jvandag@JVsSurfacePro9:~/code/ECE-361-Comp-Sys-Org/HW2/BIFF$ bash run.sh 
+make: Nothing to be done for 'all'.
+
+Current working directory: \\wsl.localhost\Ubuntu\home\jvandag\code\ECE-361-Comp-Sys-Org\HW2\BIFF
+
+Greatings traveler. . .
+If you're looking to run HW2 you've come to the right place.
+Lets begin!
+
+Input BIFF message:
+test9d911234567890 lol@!#$%9^&*()
+BIFF Message: test9d911234567890 lol@!#$%9^&*()
+
+Translation: testDLl2eas67bO lol@!#$%^&*()
