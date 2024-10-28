@@ -1,4 +1,5 @@
-jvandag@JVsSurfacePro9:~/code/ECE-361-Comp-Sys-Org/HW2/BIFF$ bash run.sh 
+jvandag@JVsSurfacePro9:~/code/ECE-361-Comp-Sys-Org/HW2/BIFF$ whoami
+jvandag
 x86_64-w64-mingw32-gcc -Wall -g -c main.c -o main.o
 x86_64-w64-mingw32-gcc -Wall -g -o BIFF.exe main.o helperFuncs.o ../libs/lineHelper.o
 

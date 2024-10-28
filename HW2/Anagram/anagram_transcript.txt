@@ -1,0 +1,45 @@
+jvandag@JVsSurfacePro9:~/code/ECE-361-Comp-Sys-Org/HW2/Anagram$ bash run.sh 
+jvandag
+x86_64-w64-mingw32-gcc -Wall -g -c main.c -o main.o
+x86_64-w64-mingw32-gcc -Wall -g -c helperFuncs.c -o helperFuncs.o
+x86_64-w64-mingw32-gcc -Wall -g -c ../libs/lineHelper.c -o ../libs/lineHelper.o
+x86_64-w64-mingw32-gcc -Wall -g -o anagram.exe main.o helperFuncs.o ../libs/lineHelper.o
+
+Current working directory: \\wsl.localhost\Ubuntu\home\jvandag\code\ECE-361-Comp-Sys-Org\HW2\Anagram
+
+Greatings traveler. . .
+If you're looking to run the anagram detector from HW2 you've come to the right place.
+Lets begin!
+
+Input first word: astronomers
+Input second word: no more stars
+The words are anagrams
+
+Input first word: school student
+Input second word: tends to slouch
+The words are anagrams
+
+Input first word: ECE-361
+Input second word: Computer Organization
+The words are not anagrams
+
+Input first word: LiFePo Battery
+Input second word: lifepobattery
+The words are anagrams
+
+Input first word: 1 too many
+Input second word: too many
+The words are anagrams
+
+Input first word: anagram
+Input second word: anogram
+The words are not anagrams
+
+Input first word: 1 dog 2 cats 3 sheep
+Input second word: $ kobalds # sheeple I should've said goat -> @ satyr
+The words are not anagrams
+
+Input first word:
+No (more) content received.
+"Gracefully" exiting...
+jvandag@JVsSurfacePro9:~/code/ECE-361-Comp-Sys-Org/HW2/Anagram$ 
