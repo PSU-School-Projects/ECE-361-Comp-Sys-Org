@@ -32,24 +32,24 @@ int main() {
     }
 
     printf("\nGreatings traveler. . .\n"
-    "If you're looking to run the BIFF speak decrypter from HW2 you've come to the right place.\n"
+    "If you're looking to run the anagram detector from HW2 you've come to the right place.\n"
     "Lets begin!\n");
     /*********END of Greeting**********/
 
     bool exit = false;
     do {
-        char str[MAX_LENGTH];
-        printf("\nInput BIFF message:\n");
-        getaLine(str, MAX_LENGTH);
-        if (strlen(str) == 0 || str[0] == '\n' || str[0] == EOF) {
-            printf("No (more) content received.\n\"Gracefully\" exiting...\n");
-            exit = true; 
-        }
-        else {
-            char trans_str[MAX_LENGTH];
-            BIFF_translate(str, trans_str);
-            printf("BIFF Message: %sTranslation: %s", str, trans_str);
-        }
+        char line1[MAX_LENGTH];
+        char line2[MAX_LENGTH];
+        printf("\nInput first word: ");
+        getaLine(line1, MAX_LENGTH);
+        exit = checkExit(line1);
+        if (exit) break;
+
+        printf("Input second word: ");
+        getaLine(line2, MAX_LENGTH);
+        exit = checkExit(line2);
+        if (exit) break;
+        printf("The words are%sanagrams\n", checkAnagram(line1, line2) ? " " : " not ");
     } while (!exit);
 
     return 0;

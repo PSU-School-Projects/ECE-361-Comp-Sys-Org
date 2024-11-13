@@ -1,0 +1,44 @@
+jvandag@JVsSurfacePro9:~/code/ECE-361-Comp-Sys-Org/HW3/Problem1$ bash ./run.sh
+The current user is jvandag
+gcc -Wall -g -c helperFuncs.c -o helperFuncs.o
+gcc -Wall -g -o Prob1.out main.o helperFuncs.o ../libs/lineHelper.o
+
+Current working directory: /home/jvandag/code/ECE-361-Comp-Sys-Org/HW3/Problem1
+
+Greatings traveler. . .
+If you're looking to run the country dialcode looker-upper from HW3 you've come to the right place.
+Lets begin!
+
+Input Country Name: Argentina
+
+Dialing code for Argentina: 54
+
+Input Country Name: arGenTina
+
+Dialing code for Argentina: 54
+
+Input Country Name: ar gentina
+
+Could not find a dialing code for ar gentina
+
+Input Country Name: United states
+
+Dialing code for United States: 1
+
+Input Country Name: South Africa
+
+Dialing code for South Africa: 27
+
+Input Country Name: spain
+
+Dialing code for Spain: 34
+
+Input Country Name: Mexico
+
+Dialing code for Mexico: 52
+
+Input Country Name: 
+No (more) content received.
+"Gracefully" exiting...
+Successfully deallocated table.
+jvandag@JVsSurfacePro9:~/code/ECE-361-Comp-Sys-Org/HW3/Problem1$ 
