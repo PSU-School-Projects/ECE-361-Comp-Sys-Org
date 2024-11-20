@@ -1,0 +1,22 @@
+total 296
+-rw-r--r-- 1 jvandag jvandag    589 Oct 27 15:38 Makefile
+-rwxr-xr-x 1 jvandag jvandag 258100 Oct 27 15:45 anagram.exe
+-rw-r--r-- 1 jvandag jvandag   1107 Oct 27 15:55 anagram_transcript.txt
+-rw-r--r-- 1 jvandag jvandag   1263 Oct 27 15:44 helperFuncs.c
+-rw-r--r-- 1 jvandag jvandag    548 Oct 27 15:37 helperFuncs.h
+-rw-r--r-- 1 jvandag jvandag   4789 Oct 27 15:45 helperFuncs.o
+-rw-r--r-- 1 jvandag jvandag   1492 Oct 27 15:43 main.c
+-rw-r--r-- 1 jvandag jvandag   5042 Oct 27 15:43 main.o
+-rw-r--r-- 1 jvandag jvandag      0 Oct 27 15:56 output.txt
+-rw-r--r-- 1 jvandag jvandag    172 Oct 27 15:54 run.sh
+total 300
+-rw-r--r-- 1 jvandag jvandag    589 Oct 27 15:38 Makefile
+-rwxr-xr-x 1 jvandag jvandag 258100 Oct 27 15:45 anagram.exe
+-rw-r--r-- 1 jvandag jvandag   1107 Oct 27 15:55 anagram_transcript.txt
+-rw-r--r-- 1 jvandag jvandag   1263 Oct 27 15:44 helperFuncs.c
+-rw-r--r-- 1 jvandag jvandag    548 Oct 27 15:37 helperFuncs.h
+-rw-r--r-- 1 jvandag jvandag   4789 Oct 27 15:45 helperFuncs.o
+-rw-r--r-- 1 jvandag jvandag   1492 Oct 27 15:43 main.c
+-rw-r--r-- 1 jvandag jvandag   5042 Oct 27 15:43 main.o
+-rw-r--r-- 1 jvandag jvandag    618 Oct 27 15:56 output.txt
+-rw-r--r-- 1 jvandag jvandag    172 Oct 27 15:54 run.sh
