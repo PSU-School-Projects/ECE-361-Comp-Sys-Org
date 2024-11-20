@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/jvandag/code/ECE-361-Comp-Sys-Org/HW3",
-      "program": "/home/jvandag/code/ECE-361-Comp-Sys-Org/HW3/build/Debug/outDebug",
+      "cwd": "/home/jvandag/code/ECE-361-Comp-Sys-Org",
+      "program": "/home/jvandag/code/ECE-361-Comp-Sys-Org/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
