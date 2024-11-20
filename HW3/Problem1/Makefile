@@ -8,7 +8,7 @@ CC = gcc
 CFLAGS = -Wall -g
 
 # Target executable
-TARGET = Prob1.out
+TARGET = Prob1.out # Prob1.exe
 
 # Source files
 SRCS = main.c helperFuncs.c ../libs/lineHelper.c
