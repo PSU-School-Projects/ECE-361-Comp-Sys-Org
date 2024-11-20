@@ -1,0 +1,120 @@
+jvandag@JVsSurfacePro9:~/code/ECE-361-Comp-Sys-Org/HW3/Problem2$ bash run.sh 
+The current user is jvandag
+gcc -Wall -g -c main.c -o main.o
+gcc -Wall -g -c helperFuncs.c -o helperFuncs.o
+gcc -Wall -g -c ../libs/lineHelper.c -o ../libs/lineHelper.o
+gcc -Wall -g -c ../libs/colors_api/colors.c -o ../libs/colors_api/colors.o
+gcc -Wall -g -c ../libs/iom361_r2/iom361_r2.c -o ../libs/iom361_r2/iom361_r2.o
+gcc -Wall -g -c ../libs/iom361_r2/float_rndm.c -o ../libs/iom361_r2/float_rndm.o
+gcc -Wall -g -o Prob2.out main.o helperFuncs.o ../libs/lineHelper.o ../libs/colors_api/colors.o ../libs/iom361_r2/iom361_r2.o ../libs/iom361_r2/float_rndm.o
+
+Current working directory: /home/jvandag/code/ECE-361-Comp-Sys-Org/HW3/Problem2
+
+Greatings traveler. . .
+If you're looking to run the country dialcode looker-upper from HW3 you've come to the right place.
+Lets begin!
+
+Initializing the I/O registers
+  ____  ____  ____  ____
+RedDC= 0% (  0), GrnDC= 0% (  0), BluDC= 0% (  0)       Enable=OFF
+Successfully Initialized
+Checking preconfigured data...
+INFO[main()]:  Retrieved item[0] sw=0000a5a5, duty cycles= {25, 102, 128}
+INFO[main()]:  Retrieved item[1] sw=00005a5a, duty cycles= {128, 128, 128}
+INFO[main()]:  Retrieved item[2] sw=0000ffff, duty cycles= {255, 255, 255}
+INFO[main()]:  Retrieved item[3] sw=00000000, duty cycles= {0, 0, 0}
+INFO[main()]:  Retrieved item[4] sw=0000ece3, duty cycles= {30, 60, 90}
+There are 5 data items to send to I/O module
+
+Please input up to 5 more data items separated by a new line to send to I/O module
+Data should be formatted like the following
+"{switch config uint32_t} {red duty cycle uint8_t} {green duty cycle uint8_t} {blue duty cycle uint8_t}
+Send a blank line to finish sending data.
+
+Input Data: xx 
+Invald data entry, entry ignored.
+Input Data: xx 1 1 1 1
+Invald data entry, entry ignored.
+Input Data: FF 250 250 125
+
+Input Data: FF 124 101 0
+
+Input Data: a1fe 01 21 2 
+
+Input Data: 01 2 2 -1 
+
+Input Data: 23123123123132 2 2 257 
+Max number of data entries reached.
+Pushing data to registers...
+
+Setting switches to     A5A5
+Writing to LED register...
+  o_o_  _o_o  o_o_  _o_o
+Writing to RGB LED to RGB LED register...
+Reg. Val: 80196680, Blue: 80, Green: 66, Red: 19, Enable: true
+RedDC= 9% ( 25), GrnDC=40% (102), BluDC=50% (128)       Enable=ON
+
+Setting switches to     5A5A
+Writing to LED register...
+  _o_o  o_o_  _o_o  o_o_
+Writing to RGB LED to RGB LED register...
+Reg. Val: 80808080, Blue: 80, Green: 80, Red: 80, Enable: true
+RedDC=50% (128), GrnDC=50% (128), BluDC=50% (128)       Enable=ON
+
+Setting switches to     FFFF
+Writing to LED register...
+  oooo  oooo  oooo  oooo
+Writing to RGB LED to RGB LED register...
+Reg. Val: 80FFFFFF, Blue: FF, Green: FF, Red: FF, Enable: true
+RedDC=100% (255), GrnDC=100% (255), BluDC=100% (255)    Enable=ON
+
+Setting switches to        0
+Writing to LED register...
+  ____  ____  ____  ____
+Writing to RGB LED to RGB LED register...
+Reg. Val: 80000000, Blue:  0, Green:  0, Red:  0, Enable: true
+RedDC= 0% (  0), GrnDC= 0% (  0), BluDC= 0% (  0)       Enable=ON
+
+Setting switches to     ECE3
+Writing to LED register...
+  ooo_  oo__  ooo_  __oo
+Writing to RGB LED to RGB LED register...
+Reg. Val: 801E3C5A, Blue: 5A, Green: 3C, Red: 1E, Enable: true
+RedDC=11% ( 30), GrnDC=23% ( 60), BluDC=35% ( 90)       Enable=ON
+
+Setting switches to       FF
+Writing to LED register...
+  ____  ____  oooo  oooo
+Writing to RGB LED to RGB LED register...
+Reg. Val: 80FAFA7D, Blue: 7D, Green: FA, Red: FA, Enable: true
+RedDC=98% (250), GrnDC=98% (250), BluDC=49% (125)       Enable=ON
+
+Setting switches to       FF
+Writing to LED register...
+  ____  ____  oooo  oooo
+Writing to RGB LED to RGB LED register...
+Reg. Val: 807C6500, Blue:  0, Green: 65, Red: 7C, Enable: true
+RedDC=48% (124), GrnDC=39% (101), BluDC= 0% (  0)       Enable=ON
+
+Setting switches to     A1FE
+Writing to LED register...
+  o_o_  ___o  oooo  ooo_
+Writing to RGB LED to RGB LED register...
+Reg. Val: 80011502, Blue:  2, Green: 15, Red:  1, Enable: true
+RedDC= 0% (  1), GrnDC= 8% ( 21), BluDC= 0% (  2)       Enable=ON
+
+Setting switches to        1
+Writing to LED register...
+  ____  ____  ____  ___o
+Writing to RGB LED to RGB LED register...
+Reg. Val: 800202FF, Blue: FF, Green:  2, Red:  2, Enable: true
+RedDC= 0% (  2), GrnDC= 0% (  2), BluDC=100% (255)      Enable=ON
+
+Setting switches to     3132
+Writing to LED register...
+  __oo  ___o  __oo  __o_
+Writing to RGB LED to RGB LED register...
+Reg. Val: 80020201, Blue:  1, Green:  2, Red:  2, Enable: true
+RedDC= 0% (  2), GrnDC= 0% (  2), BluDC= 0% (  1)       Enable=ON
+
+jvandag@JVsSurfacePro9:~/code/ECE-361-Comp-Sys-Org/HW3/Problem2$ 
