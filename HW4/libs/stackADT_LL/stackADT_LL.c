@@ -1,9 +1,9 @@
 /**
  * @file stackADT_LL.c
  *
- * @version <your version>
- * @author <your name> (<your email address>)
- * @date   <date>
+ * @version <1.0>
+ * @author Jeremiah Vandagrift (jcv3@pdx.edu)
+ * @date   26-Nov-2024
  *
  * @brief
  * Source code for linked list-based stack. This stack is based on Roy's Linked List ADT.
@@ -28,42 +28,75 @@
 
 // creates a new stack instance
 llStackPtr_t createStack() {
-    //TODO:  Implement your functionality
+	llStackPtr_t stackPtr = malloc(sizeof(llStack_t));
+    if (stackPtr == NULL) {
+        fprintf(stderr, "ERROR[createStack]: Memory allocation failed\n");
+        exit(EXIT_FAILURE);
+    }
+	// Assign the top pointer to the head of the linked list
+    stackPtr->top = createLList();
+    return stackPtr;
 }
 
 
 // pushes data onto the stack
 void push(llStackPtr_t stk, ll_data_t data){
-    // TODO: implement your functionality
+	 if (stk == NULL || stk->top == NULL) {
+        fprintf(stderr, "ERROR[push]: Stack is empty\n");
+        return;
+    }
+	// Insert the node at the front of the list
+    insertNodeInLList(stk->top, data, 1);
 }
 
 
 // returns the number of valid elements in the linked list
 int size(llStackPtr_t stk){
-    //TODO:  implement your functionality
+	if (isEmpty(stk)) {
+        fprintf(stderr, "ERROR[size]: Stack is empty\n");
+        return 0;
+    }
+    return LListLength(stk->top);
 }
 
 
 // returns true if the stack is empty, false otherwise
 bool isEmpty(llStackPtr_t stk) {
-    //TODO:  implement your functionality
+	if (stk == NULL || stk->top == NULL) {
+        fprintf(stderr, "ERROR[isEmpty]: Stack is NULL\n");
+        return true;
+    }
+	// List is functional but empty
+    return (LListLength(stk->top) == 0);
 }
 
 
 // returns and removes the top element of the stack
 ll_data_t pop(llStackPtr_t stk){ 
-   //TODO:  implement your functionality
+	if (isEmpty(stk)) {
+        fprintf(stderr, "ERROR[pop]: Stack is empty!\n");
+        exit(EXIT_FAILURE);
+    }
+    ll_data_t data = getNodeDataInLList(stk->top, 1);
+    deleteNodeFromLLinkedList(stk->top, 1); 
+    return data;
 }
 
 
 // returns the top element of the stack but does not pop the element off the stack
 ll_data_t peek(llStackPtr_t stk){
-    //TODO:  implement your functionality
+	if (isEmpty(stk)) {
+        fprintf(stderr, "ERROR[peek]: Stack is empty or NULL\n");
+        exit(EXIT_FAILURE);
+    }
+    return getNodeDataInLList(stk->top, 1);
 }
 
 // deletes the linked list that implements the stack and the stack instance
 void deleteStack(llStackPtr_t stk){
-    //TODO:  implement your functionality
+	if (stk == NULL) return;
+    deleteLList(stk->top);
+    free(stk);
  }
 
 

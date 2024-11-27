@@ -1,0 +1,38 @@
+jvandag@JVsSurfacePro9:~/code/ECE-361-Comp-Sys-Org/HW4/libs/stackADT_LL$ ./test.out 
+Minimal test program for the stack ADT by Roy Kravitz (roy.kravitz@pdx.edu)
+Current working directory: /home/jvandag/code/ECE-361-Comp-Sys-Org/HW4/libs/stackADT_LL
+
+
+Top element is 10
+Stack size is 11
+stack[1..11]: 10 <= 9 <= 8 <= 7 <= 6 <= 5 <= 4 <= 3 <= 2 <= 1 <= 0
+Top two elements on the stack are:
+stack[1..2]: 10 <= 9
+Popped element is 10
+Popped element is 9
+Popped element is 8
+Popped element is 7
+Popped element is 6
+Popped element is 5
+Popped element is 4
+Popped element is 3
+Popped element is 2
+Popped element is 1
+Popped element is 0
+Stack is empty
+jvandag@JVsSurfacePro9:~/code/ECE-361-Comp-Sys-Org/HW4/libs/stackADT_LL$ 
+
+
+The stack is built on the underlying linked list which passed the test program provided.
+This was the biggest part towards the success of the stack.
+
+The implementation of the stack was mostly a wrapper around this working linked list.
+Each stack function directly interfaces with the linked list's functions to add or remove nodes 
+and update the information in the stack wrapper.  
+
+When observing the test file, the numbers that are inputted into the stack retreived from the Stack
+and displayed in the order expected by the test program and the functionallity of a stack. The stack
+successfully implements a FIFO order of inserting and retrieving and properly prints the items and wheter the stack is empty
+
+Not entirely sure how to answer this question other than that. It works because I programmed it to work like a 
+stack and it passes the tests and behaves like a stack is expected too.

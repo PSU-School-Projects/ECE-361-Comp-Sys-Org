@@ -1,0 +1,20 @@
+jvandag@JVsSurfacePro9:~/code/ECE-361-Comp-Sys-Org/HW4/libs/SLLinkedList$ ./a.out 
+Linked List ADT test program by Roy Kravitz (roy.kravitz@pdx.edu)
+
+Current working directory: /home/jvandag/code/ECE-361-Comp-Sys-Org/HW4/libs/SLLinkedList
+
+Created a new Linked List
+Number of nodes in List: 0
+Inserting 5 and 2 into list...
+ Data from the Linked list nodes are:  node(1)= 5, node(2)= 2
+ERROR: LinkedList ADT(getNodeDataInLList): Position 3 is not in the list
+Number of nodes in List: 2
+List contents: 5 2 
+Deleting a node from list...
+Number of nodes in List: 1
+List contents: 2 
+jvandag@JVsSurfacePro9:~/code/ECE-361-Comp-Sys-Org/HW4/libs/SLLinkedList$ 
+
+POST COMMENT: The last print statement does not trigger as it assumes that free() sets the passed in pointer to NULL
+when done freeing which is not the case, hence why there is no list deleted message. 
+TLDR it's your code not mine :^)
