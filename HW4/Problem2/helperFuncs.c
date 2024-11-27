@@ -39,11 +39,8 @@ bool parseRPN(char expr[]) {
             case '+':
                 op2 = pop(stackPtr);
                 op1 = pop(stackPtr);
-                if (op1 && op2) {
-                    result = op1 + op2;
-                    push(stackPtr, result);
-                }
-                else return false;
+                result = op1 + op2;
+                push(stackPtr, result);
                 break;
             case '-':
                 op2 = pop(stackPtr);
@@ -57,67 +54,49 @@ bool parseRPN(char expr[]) {
             case '*':
                 op2 = pop(stackPtr);
                 op1 = pop(stackPtr);
-                if (op1 && op2) {
-                    result = op1 * op2;
-                    push(stackPtr, result);
-                }
-                else return false;
+                result = op1 * op2;
+                push(stackPtr, result);
                 break;
             case '/':
                 op2 = pop(stackPtr);
                 op1 = pop(stackPtr);
-                if (op1 && op2) {
                     if (op1 == 0 || op2 == 0) {
                         fprintf(stderr, "\nERROR[parseRPN]: Division by zero.");
                         return false;
                     }
                     result = op1 / op2;
                     push(stackPtr, result);
-                }
-                else return false;
                 break;
             case '%':
                 op2 = pop(stackPtr);
                 op1 = pop(stackPtr);
-                if (op1 && op2) {
-                    if (op1 == 0 || op2 == 0) {
-                        fprintf(stderr, "\nERROR[parseRPN]: Modulus by zero.");
-                        return false;
-                    }
-                    result = op1 % op2;
-                    push(stackPtr, result);
+                if (op1 == 0 || op2 == 0) {
+                    fprintf(stderr, "\nERROR[parseRPN]: Modulus by zero.");
+                    return false;
                 }
-                else return false;
+                result = op1 % op2;
+                push(stackPtr, result);
                 break;
             case '&':
                 op2 = pop(stackPtr);
                 op1 = pop(stackPtr);
-                if (op1 && op2) {
-                    result = op1 & op2;
-                    push(stackPtr, result);
-                }
-                else return false;
+                result = op1 & op2;
+                push(stackPtr, result);
                 break;
             case '|':
                 op2 = pop(stackPtr);
                 op1 = pop(stackPtr);
-                if (op1 && op2) {
-                    result = op1 | op2;
-                    push(stackPtr, result);
-                }
-                else return false;
+                result = op1 | op2;
+                push(stackPtr, result);
                 break;
             case '~':
                 op1 = pop(stackPtr);
-                if (isdigit(op1)) {
-                    result = op1 | op2;
-                    push(stackPtr, result);
-                }
-                else return false;
+                result = op1 ^ 0xFFFFFFFF;
+                push(stackPtr, result);
                 break;
             case '=':
                 result = pop(stackPtr);
-                printf("\n%s %d", expr, result);
+                printf("Result: %s %d\n", expr, result);
                 deleteStack(stackPtr);
                 parsing = false;
                 break;

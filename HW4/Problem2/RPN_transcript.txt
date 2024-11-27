@@ -1,0 +1,52 @@
+jvandag@JVsSurfacePro9:~/code/ECE-361-Comp-Sys-Org/HW4/Problem2$ make clean
+rm -f ./helperFuncs.o ./main.o ../libs/colors_api/colors.o ../libs/iom361_r2/float_rndm.o ../libs/iom361_r2/iom361_r2.o ../libs/lineHelper.o ../libs/SLLinkedList/linkedList.o ../libs/stackADT_LL/stackADT_LL.o Prob2.out
+jvandag@JVsSurfacePro9:~/code/ECE-361-Comp-Sys-Org/HW4/Problem2$ make
+gcc -Wall -g -c helperFuncs.c -o helperFuncs.o
+gcc -Wall -g -c main.c -o main.o
+gcc -Wall -g -c ../libs/colors_api/colors.c -o ../libs/colors_api/colors.o
+gcc -Wall -g -c ../libs/iom361_r2/float_rndm.c -o ../libs/iom361_r2/float_rndm.o
+gcc -Wall -g -c ../libs/iom361_r2/iom361_r2.c -o ../libs/iom361_r2/iom361_r2.o
+gcc -Wall -g -c ../libs/lineHelper.c -o ../libs/lineHelper.o
+gcc -Wall -g -c ../libs/SLLinkedList/linkedList.c -o ../libs/SLLinkedList/linkedList.o
+gcc -Wall -g -c ../libs/stackADT_LL/stackADT_LL.c -o ../libs/stackADT_LL/stackADT_LL.o
+gcc -Wall -g -o Prob2.out helperFuncs.o main.o ../libs/colors_api/colors.o ../libs/iom361_r2/float_rndm.o ../libs/iom361_r2/iom361_r2.o ../libs/lineHelper.o ../libs/SLLinkedList/linkedList.o ../libs/stackADT_LL/stackADT_LL.o
+jvandag@JVsSurfacePro9:~/code/ECE-361-Comp-Sys-Org/HW4/Problem2$ ./Prob2.out 
+
+Current working directory: /home/jvandag/code/ECE-361-Comp-Sys-Org/HW4/Problem2
+
+Greatings traveler. . .
+If you're looking to run the RPN calculator from HW4 you've come to the right place.
+Lets begin!
+
+
+Input Data: 23+8-=
+Result: 23+8-= -3
+
+Input Data: 93/2&=
+Result: 93/2&= 2
+
+Input Data: 18*=        
+Result: 18*= 8
+
+Input Data: 1 8 * 4 / =     
+Result: 18*4/= 2
+
+Input Data: 25|=    
+Result: 25|= 7
+
+Input Data: 35|=
+Result: 35|= 7
+
+Input Data: 4~=
+Result: 4~= -5
+
+Input Data: 3~=
+Result: 3~= -4
+
+Input Data: 23+4+1- 2/3*5%=
+Result: 23+4+1-2/3*5%= 2
+
+Input Data: d1&=
+
+ERROR[parseRPN]: Invalid character received in expression
+Exiting...No valid expressions received. Exiting program...

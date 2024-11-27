@@ -1,0 +1,63 @@
+jvandag@JVsSurfacePro9:~/code/ECE-361-Comp-Sys-Org/HW4/Problem3$ ./Prob3.out 
+
+Current working directory: /home/jvandag/code/ECE-361-Comp-Sys-Org/HW4/Problem3
+
+Greatings traveler. . .
+If you're looking for problem of HW4 you've come to the right place.
+Lets begin!
+
+Initializing the I/O registers
+  ____  ____  ____  ____
+RedDC= 0% (  0), GrnDC= 0% (  0), BluDC= 0% (  0)       Enable=OFF
+Successfully Initialized
+
+Setting sensors to random values and sampling data
+Temperature: 32.4C(000696F9), Relative Humidity: 72.9%(000BAAE1)
+Temperature: 47.2C(0007C674), Relative Humidity: 76.2%(000C31B5)
+Temperature: 32.9C(0006A11A), Relative Humidity: 76.7%(000C458B)
+Temperature: 37.5C(000700C3), Relative Humidity: 86.2%(000DCC68)
+Temperature: 60.2C(0008D092), Relative Humidity: 79.9%(000CC7A0)
+Temperature: 36.2C(0006E5BC), Relative Humidity: 84.1%(000D762D)
+Temperature: 38.7C(000718E3), Relative Humidity: 83.6%(000D5FB8)
+Temperature: 64.9C(00093117), Relative Humidity: 78.5%(000C8EE5)
+
+Temperature Table:
+-----------------------
+Index | Temperature (F)
+    1 | 32.37
+    2 | 32.87
+    3 | 36.22
+    4 | 37.54
+    5 | 38.72
+    6 | 47.19
+    7 | 60.18
+    8 | 64.90
+--------------------
+Average Temperature: 43.75F
+
+Humidity Table:
+--------------------
+Index | Humidity (%)
+    1 | 72.92
+    2 | 76.21
+    3 | 76.70
+    4 | 78.49
+    5 | 79.87
+    6 | 83.59
+    7 | 84.14
+    8 | 86.24
+--------------------
+Average Humidity: 79.77%
+
+#############################################################
+
+The application appears to be working correctly from the printed transcript. 
+I used a very similar process for generating random values as the example in HW3. 
+This utilized the functions that were built into the iom module and returned what was expected. 
+I repeated this process untl I got eight samples, one for every "3 hours" and logged them into their own
+arrays and using a sorted insert helper function. When reading the array values in order the values only increase
+with each subsequent index.
+When averaging the values by hand I also received the same results as the application 
+so I assume it also does that part correctly too. 
+
+When runnin the application multiple times it continues to produce reliably sorted results.

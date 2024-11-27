@@ -5,5 +5,5 @@ echo "The current user is $(whoami)"
 make
 
 # run the program
-./Prob2.out # > output.txt
+./Prob3.out # > output.txt
 
