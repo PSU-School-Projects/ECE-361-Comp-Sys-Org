@@ -46,7 +46,7 @@ int main() {
         free(buf);
     }
 
-    printf("\nGreatings traveler. . .\n"
+    printf("\nGreetings traveler. . .\n"
     "If you're looking for ECE 361 HW5, the temperature and humidity logger, you've come to the right place.\n"
     "Lets begin!\n\n");
     /*********END of Greeting**********/

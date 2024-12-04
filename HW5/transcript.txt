@@ -14,7 +14,7 @@ gcc -Wall -g -o tempHumLogger.out helperFuncs.o main.o libs/iom361_r2/iom361_r2.
 
 Current working directory: /home/jvandag/code/ECE-361-Comp-Sys-Org/HW5
 
-Greatings traveler. . .
+Greetings traveler. . .
 If you're looking for ECE 361 HW5, the temperature and humidity logger, you've come to the right place.
 Lets begin!
 
