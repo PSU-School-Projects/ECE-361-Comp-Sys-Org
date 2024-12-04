@@ -1,0 +1,73 @@
+jvandag@JVsSurfacePro9:~/code/ECE-361-Comp-Sys-Org/HW5$ bash run.sh 
+The current user is jvandag
+gcc -Wall -g -c helperFuncs.c -o helperFuncs.o
+gcc -Wall -g -c main.c -o main.o
+main.c: In function ‘main’:
+main.c:25:18: warning: variable ‘query’ set but not used [-Wunused-but-set-variable]
+   25 |     struct node* query = NULL;
+      |                  ^~~~~
+gcc -Wall -g -c libs/iom361_r2/iom361_r2.c -o libs/iom361_r2/iom361_r2.o
+gcc -Wall -g -c libs/BST.c -o libs/BST.o
+gcc -Wall -g -c libs/lineHelper.c -o libs/lineHelper.o
+gcc -Wall -g -c libs/random_float_generator/float_rndm.c -o libs/random_float_generator/float_rndm.o
+gcc -Wall -g -o tempHumLogger.out helperFuncs.o main.o libs/iom361_r2/iom361_r2.o libs/BST.o libs/lineHelper.o libs/random_float_generator/float_rndm.o
+
+Current working directory: /home/jvandag/code/ECE-361-Comp-Sys-Org/HW5
+
+Greatings traveler. . .
+If you're looking for ECE 361 HW5, the temperature and humidity logger, you've come to the right place.
+Lets begin!
+
+Initializing the I/O registers...
+  ____  ____  ____  ____
+RedDC= 0% (  0), GrnDC= 0% (  0), BluDC= 0% (  0)       Enable=OFF
+Successfully Initialized
+Initializing BST...
+Successfully Initialized
+
+Input a start date to populate a month worth of data from: 12-4-2024
+
+Evenly populating binary search tree...
+Input a date to look up the temperature and humidty for: 12/10/2024
+Found: 12/10/2024, Temperature: 59.0F, Relative Humidity: 75.0%
+
+Input a date to look up the temperature and humidty for: 12/10/2023
+Could not find entry for 12/10/2023
+Input a date to look up the temperature and humidty for: 12-10-2024
+Found: 12/10/2024, Temperature: 59.0F, Relative Humidity: 75.0%
+
+Input a date to look up the temperature and humidty for: 1/02/2025
+Found: 01/02/2025, Temperature: 54.0F, Relative Humidity: 81.0%
+
+Input a date to look up the temperature and humidty for: this is defintiely date 
+Invalid date format: this is def
+ERROR[main.c] Bad date provided, exiting...jvandag@JVsSurfacePro9:~/code/ECE-361-Comp-Sys-Org/HW5$ 
+
+
+################################################################
+####################### SECOND RUN #############################
+################################################################
+
+
+jvandag@JVsSurfacePro9:~/code/ECE-361-Comp-Sys-Org/HW5$ bash run.sh 
+The current user is jvandag
+make: 'tempHumLogger.out' is up to date.
+
+Current working directory: /home/jvandag/code/ECE-361-Comp-Sys-Org/HW5
+
+Greatings traveler. . .
+If you're looking for ECE 361 HW5, the temperature and humidity logger, you've come to the right place.
+Lets begin!
+
+Initializing the I/O registers...
+  ____  ____  ____  ____
+RedDC= 0% (  0), GrnDC= 0% (  0), BluDC= 0% (  0)       Enable=OFF
+Successfully Initialized
+Initializing BST...
+Successfully Initialized
+
+Input a start date to populate a month worth of data from: not a date
+Invalid date format: not a date
+
+Aborting...
+jvandag@JVsSurfacePro9:~/code/ECE-361-Comp-Sys-Org/HW5$ 
