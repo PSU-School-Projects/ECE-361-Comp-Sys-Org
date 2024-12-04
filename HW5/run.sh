@@ -5,5 +5,5 @@ echo "The current user is $(whoami)"
 make
 
 # run the program
-./Prob3.out # > output.txt
+./tempHumLogger.out # > output.txt
 

@@ -16,7 +16,7 @@
 #define HUMID_RANGE_HI	88.8
 #define NUM_READINGS 8
 
-uint32_t* io_base;
+uint32_t* io_base
 
 
 int main() {

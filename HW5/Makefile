@@ -11,7 +11,6 @@ TARGET = tempHumLogger.out
 SRCS = $(filter-out ./libs/iom361_r2/test_iom361_r2.c ./libs/random_float_generator/test_float_rndm.c, \
 $(wildcard ./*.c)  $(wildcard ./libs/iom361_r2/*.c) \
 $(wildcard ./libs/*.c) $(wildcard ./libs/random_float_generator/*.c))
-
 # Object files for main program
 OBJS = $(SRCS:.c=.o)
 

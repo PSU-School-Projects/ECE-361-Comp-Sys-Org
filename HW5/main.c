@@ -13,18 +13,17 @@
 #define TEMP_RANGE_HI	65.5
 #define HUMID_RANGE_LOW	72.2
 #define HUMID_RANGE_HI	88.8
-#define NUM_READINGS 30
+#define NUM_DAYS 31
 
 uint32_t* io_base;
 
-
 int main() {
     int rtn_code;
-	char date_string[MAX_DATE_STR_SIZE];
+    bool exit = false;
+    bool abort = false;
+    bool populated = false;
+    struct node* query = NULL;
     
-    int count = 0;
-	float temp, humid;
-		 
 	// greet the user and display the working directory for the application
     // this code should be included in all of the applications you submit for ECE 361
     errno = 0;
@@ -43,8 +42,7 @@ int main() {
     "Lets begin!\n\n");
     /*********END of Greeting**********/
 	 
-	// ADD YOUR CODE TO INITIALIZE iom361
-	printf("Initializing the I/O registers\n");
+	printf("Initializing the I/O registers...\n");
     sleep(1);
 	io_base = iom361_initialize(16, 16, &rtn_code);
 	if (rtn_code != 0) {
@@ -53,36 +51,47 @@ int main() {
 		return 1;
 	}
 	printf("Successfully Initialized\n");
-	
-    //printf("Checking preconfigured data...\n");
-	// get the "hardwired" data
-	//num_items = populate_data_array();
 
-	uint32_t tempVal, humidVal;
-	
-	printf("\nSetting sensors to random values and sampling data\n");	 
-	 while (count < NUM_READINGS) {
-        // Set sensors to random values and read data
-        _iom361_setSensor1_rndm(TEMP_RANGE_LOW, TEMP_RANGE_HI, HUMID_RANGE_LOW,
-                                HUMID_RANGE_HI);
 
-        tempVal = iom361_readReg(io_base, TEMP_REG, NULL);
-        temp = (tempVal / powf(2, 20)) * 200.0 - 50;
-        humidVal = iom361_readReg(io_base, HUMID_REG, NULL);
-        humid = (humidVal / powf(2, 20)) * 100;
-
-        // Sort reading data
-        // sortedInsert(temp, sortedTemps, count);
-        // sortedInsert(humid, sortedHumids, count);
-
-        printf("Temperature: %3.1fC(%08X), Relative Humidity: %3.1f%%(%08X)\n",
-               temp, tempVal, humid, humidVal);
-
-        count++;
-
-        // Sleep "3 hours" (24/8)
-        sleep(1);
+    printf("Initializing BST...\n");  
+	struct BST* bst = createBST();
+    printf("Successfully Initialized\n");
+    
+    printf("\nInput a start date to populate a month worth of data from: ");
+    char start_str[MAX_DATE_STR_SIZE];
+    getaLine(start_str, MAX_DATE_STR_SIZE);
+    if (date_to_epoch(start_str) != -1) {
+        printf("\nEvenly populating binary search tree...");
+        populateBST(start_str, bst, NUM_DAYS, io_base);
+        populated = true;
     }
+    else {
+        printf("Aborting...\n");
+        exit = abort = true;
+        return 1;
+    } 
+
+    while (!exit) {
+        char str[MAX_DATE_STR_SIZE];
+        printf("\nInput a date to look up the temperature and humidty for: ");
+        getaLine(str, MAX_DATE_STR_SIZE);
+        if (strlen(str) == 0 || str[0] == '\n' || str[0] == EOF) {
+            printf("No (more) content received.\nDisplaying full tree contents before \"gracefully\" exiting...");
+            exit = true; 
+        }
+        else {
+            time_t time = date_to_epoch(str);
+            
+            if (time == -1) {
+                fprintf(stderr, "ERROR[main.c] Bad date provided, exiting...");
+                exit = abort = true;
+            }
+            else query = bst->search(bst->root, time);
+        }
+    };
+
+    if (populated && !abort) bst->displayTree(bst->root);
+
     return 0;
 }
  
