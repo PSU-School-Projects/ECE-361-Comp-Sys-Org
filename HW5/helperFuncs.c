@@ -1,3 +1,12 @@
+/**
+ * helperFuncs.c source file
+ *
+ * @file:		helperFuncs.c
+ * @author:		Jeremiah Vandagrift (jcv3@pdx.edu)
+ * @date:		04-Dec-2023
+ * @version:	1.0
+ */
+
 #include "helperFuncs.h"
 #include <stdio.h>
 #include <stdlib.h>

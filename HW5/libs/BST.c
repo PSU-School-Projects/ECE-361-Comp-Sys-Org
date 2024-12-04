@@ -1,6 +1,12 @@
+/**
+ * BST.c source file for implementing a binary search tree
+ *
+ * @file:		BST.c
+ * @author:		Jeremiah Vandagrift (jcv3@pdx.edu)
+ * @date:		04-Dec-2023
+ * @version:	1.0
+ */
 #include "BST.h"
-
-
 
 /**
  * @brief Given a date, populates the passed in BST with the next 30 days

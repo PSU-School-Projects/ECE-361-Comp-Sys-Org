@@ -1,3 +1,12 @@
+/**
+ * BST.h header file for implementing a binary search tree
+ *
+ * @file:		BST.h
+ * @author:		Jeremiah Vandagrift (jcv3@pdx.edu)
+ * @date:		04-Dec-2023
+ * @version:	1.0
+ */
+
 #ifndef _BST_H
 #define _BST_H
 

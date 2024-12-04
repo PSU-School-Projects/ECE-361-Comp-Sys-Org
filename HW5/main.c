@@ -1,3 +1,12 @@
+/**
+ * main.c source file
+ *
+ * @file:		main.c
+ * @author:		Jeremiah Vandagrift (jcv3@pdx.edu)
+ * @date:		04-Dec-2023
+ * @version:	1.0
+ */
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>

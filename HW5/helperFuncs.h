@@ -1,3 +1,12 @@
+/**
+ * helperFuncs.h header file for helperFuncs.c
+ *
+ * @file:		helperFuncs.h
+ * @author:		Jeremiah Vandagrift (jcv3@pdx.edu)
+ * @date:		04-Dec-2023
+ * @version:	1.0
+ */
+
 #ifndef _HELPER_FUNCS_H
 #define _HELPER_FUNCS_H
 
